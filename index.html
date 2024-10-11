@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sidomeny-test med anime.js</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+        <div class="content_wrapper">
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav class="side-menu" id="sideMenu">
+                <ul>
+                    <li><a href="#">Item 1</a></li>
+                    <li><a href="#">Item 2</a></li>
+                    <li><a href="#">Item 3</a></li>
+                </ul>
+            </nav>
+
+            <section class="anime_section hide">
+                <figure class="ball"></figure>
+                <button class="btn ball-btn">Play</button>
+            </section>
+
+            <section class="anime_section bg_section hide">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore sed quae officiis voluptate
+                    similique
+                    possimus esse! Ab accusamus saepe perferendis provident voluptatibus amet illum obcaecati assumenda
+                    molestias impedit fugiat nam fugit rem totam tempora corrupti, dicta quod similique pariatur!
+                    Placeat.
+                </p>
+                <button class="btn bg-btn">Change color</button>
+            </section>
+
+            <section class="anime_section loader_section hide">
+                <div class="loader"></div>
+            </section>
+
+            <section class="anime_section puls-btn-section hide">
+                <button class="btn puls-btn">Puls</button>
+            </section>
+
+            <section class="anime_section star_section hide">
+                <figure class="star"></figure>
+                <figure class="star"></figure>
+                <figure class="star"></figure>
+                <figure class="star"></figure>
+                <figure class="star"></figure>
+                <figure class="star"></figure>
+                <figure class="star"></figure>
+                <figure class="star"></figure>
+            </section>
+
+            <section class="anime_section svg_path_section hide">
+                <figure class="path_object"></figure>
+                <svg class="resp-svg" xmlns="http://www.w3.org/2000/svg" width="599" height="312" viewBox="0 0 599 312" fill="none">
+                    <path id="path" d="M133 131C-19 -7 37 118 1 300C226.667 324.667 660.6 324 591 124C504 -126 369 62 363 182C357 302 285 269 133 131Z" stroke="black" fill="none"/></path>
+                </svg>
+            </section>
+
+            <section class="anime_section bounce_section  hide">
+                <div class="bouncing_ball"></div>
+            </section>
+
+            <section class="anime_section typewriter_section hide">
+                <div class="typewriter_text"></div>
+            </section>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js"
+            integrity="sha512-aNMyYYxdIxIaot0Y1/PLuEu3eipGCmsEUBrUq+7aVyPGMFH8z0eTP0tkqAvv34fzN6z+201d3T8HPb1svWSKHQ=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="scripts.js"></script>
+</body>
+
+</html>

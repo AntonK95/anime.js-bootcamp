@@ -1,0 +1,309 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #444;
+}
+
+.content-wrapper {
+    display: grid;
+    place-content: center;
+}
+
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    background-color: #333;
+    padding: 15px;
+    margin: 1rem;
+    padding: 1rem;
+}
+
+.hamburger {
+    position: sticky;
+    top: .5rem;
+    left: 94vw;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    padding: .5rem;
+    background-color: tomato;
+    border-radius: 10px;
+    margin: .5rem;
+    z-index: 1000;
+}
+
+.hamburger span {
+    width: 100%;
+    height: 4px;
+    background-color: black;
+    transition: all 0.3s ease;
+}
+
+.side-menu {
+    position: fixed;
+    top: 0;
+    right: -500px;
+    width: 500px;
+    height: 100%;
+    background-color: #444444bb;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: right 0.3s ease;
+}
+
+.side-menu ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+.side-menu ul li {
+    margin: 20px 0;
+}
+
+.side-menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+.open {
+    right: 0;
+    opacity: 1;
+    filter: blur(0);
+}
+
+/* Kryssanimation */
+.hamburger.open span:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 8px);
+}
+
+.hamburger.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* Sektioner för dummy data */
+section {
+    height: 500px;
+    padding: 20px;
+    text-align: center;
+}
+
+section:nth-child(odd) {
+    background-color: #636363;
+}
+
+section:nth-child(even) {
+    background-color: #ddd;
+}
+
+/* Basic section styling */
+
+.anime_section {
+    position: relative;
+    display: flex;
+    align-items: center;
+    border: solid hsla(0, 0%, 0%, 0.6) 5px;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 20px;
+}
+
+/* Ball first assignment */
+.ball {
+    height: 40px;
+    width: 40px;
+    background-color: aqua;
+    border-radius: 50%;
+    position: relative;
+}
+
+.btn {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 1rem;
+    padding: 1rem 2rem;
+    color: black;
+    font-family: sans-serif;
+    font-weight: 900;
+    font-size: 26px;
+    background-color: #ff6347;
+    border: solid .2px black;
+    border-radius: 5px;   
+}
+
+.ball-btn {
+    left: calc(50% - 63px);
+}
+
+/* Change background-color section */
+
+.bg-btn {
+    left: calc(50% - 125px);
+}
+
+
+/* Loader section */
+.loader_section {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+.loader {
+    border: 20px solid #ddd;
+    border-top: 20px solid #ff6347;
+    border-radius: 50%;
+    width: 100px; 
+    height: 100px;
+}
+
+/* Pulsating btn section */
+
+.puls-btn-section {
+    display: grid;
+    place-content: center;
+    place-items: center;
+}
+
+.puls-btn {
+    position: absolute;
+    top: calc(45% - 25px);
+    bottom: calc(45% - 25px);
+    cursor: pointer;
+    transition: transform .5s ease;
+}
+
+/* Falling star section */
+
+.star_section {
+    position: relative;
+    display: flex;
+    overflow: hidden;
+}
+
+
+.star {
+    position: absolute;
+    top: -10px;
+    border-bottom: 5px solid rgb(148, 148, 8); 
+    border-right: 7.5px solid transparent;     
+    border-left: 7.5px solid transparent;      
+    transform: rotate(-37deg); 
+}
+
+.star::before {
+    content: "";
+    position: absolute;
+    left: -7.5px; 
+    border-bottom: 5px solid rgb(148, 148, 8);
+    border-right: 7.5px solid transparent;
+    border-left: 7.5px solid transparent;
+    transform: rotate(-71.5deg); 
+}
+
+.star::after {
+    content: "";
+    position: absolute;
+    left: -7.5px; 
+    border-bottom: 5px solid rgb(148, 148, 8);
+    border-right: 7.5px solid transparent;
+    border-left: 7.5px solid transparent;
+    transform: rotate(71.5deg); 
+}
+
+/* Follaw path section */
+
+ .svg_path_section {
+    position: relative;
+    display: grid;
+    place-content: center;
+}
+
+.resp-svg {
+    width: 100%;
+    height: auto;
+}
+
+.path_object {
+    width: 20px;
+    height: 20px;
+    background-color: tomato;
+    border-radius: 50%;
+    position: relative;
+    top: 10px;
+    left: -10px;
+} 
+
+
+/* Bouncing ball section */
+
+.bounce_section {
+    position: relative;
+    overflow: hidden;
+}
+
+.bouncing_ball {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: tomato;
+    position: absolute;
+    place-self: center;
+    top: 0;
+    left: 0;
+    animation: bounce 5s ease-in-out infinite;
+}
+
+@keyframes bounce {
+    0% { 
+        transform: translateX(0) translateY(0); /* Startar i det övre vänstra hörnet */
+    }
+    20% { 
+        transform: translateX(20%) translateY(80%); /* Första studsen nedåt, 80% av containerhöjden */
+    }
+    40% {
+        transform: translateX(40%) translateY(0); /* Studsar upp, tillbaka till toppen */
+    }
+    60% { 
+        transform: translateX(60%) translateY(64%); /* Andra studsen, 64% av containerhöjden */
+    }
+    80% {
+        transform: translateX(80%) translateY(0); /* Studsar upp igen, tillbaka till toppen */
+    }
+    90% { 
+        transform: translateX(90%) translateY(51.2%); /* Tredje studsen, 51.2% av containerhöjden */
+    }
+    100% { 
+        transform: translateX(100%) translateY(0); /* Slutligen tillbaka till toppen vid 100% bredd */
+    }
+}
+
+
+.typewriter_section {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 28px;
+    white-space: pre; /* respektera mellanrum */
+    word-wrap: break-word;
+    place-content: center;
+}
+
+.typewriter_text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
